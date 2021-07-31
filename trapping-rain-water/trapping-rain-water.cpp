@@ -5,7 +5,7 @@ public:
             if(n<=1){
                     return 0;
             }
-        vector<int> mxl(n), mxr(n),water(n);
+        vector<int> mxl(n), mxr(n);
             int ans=0;
             mxl[0] = height[0];
             mxr[n-1] = height[n-1];
@@ -19,11 +19,9 @@ public:
             }
             
             for(int i=0;i<n;i++){
-                    water[i] = min(mxr[i],mxl[i]) - height[i];
+                    ans+= min(mxr[i],mxl[i]) - height[i];
             }
-            for(int i=0;i<n;i++){
-                    ans+= water[i];
-            }
+          
             return ans;
     }
 };

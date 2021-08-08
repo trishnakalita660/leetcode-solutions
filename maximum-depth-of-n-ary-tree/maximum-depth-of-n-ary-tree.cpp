@@ -23,6 +23,7 @@ public:
         
    
     int maxDepth(Node* root) {
+            if(!root) return 0;
            int ans=0;
             if(root){
                     for(auto child: root->children){

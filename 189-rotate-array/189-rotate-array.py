@@ -5,9 +5,10 @@ class Solution:
         
         
         """
-        if k==0 or len(nums) ==0:
+        n= len(nums)
+        if k==0 or n ==0:
                 nums[:] = nums
         else :
-                k= k%len(nums)
+                k= k%n
                 nums[:] =nums[-k:]+nums[:-k] 
         
